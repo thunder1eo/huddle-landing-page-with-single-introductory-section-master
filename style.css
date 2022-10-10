@@ -1,0 +1,123 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+body {
+    background-image: url(/images/bg-desktop.svg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-color: var(--violet);
+    font-family: 'Open Sans';
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+header {
+    margin-bottom: 140px;
+}
+header img{
+    width: 200px;
+}
+main {
+    width: 1500px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); */
+}
+.content--wrapper {
+    margin-left: 50px;
+}
+.content--wrapper h1 {
+    font-family: 'Poppins';
+    letter-spacing: 1pt;
+    font-size: 48px;
+}
+.content--wrapper p {
+    margin-top: 40px;
+    font-size: 18px;
+}
+.content--wrapper button {
+    padding: 15px 80px;
+    color: var(--violet);
+    font-family: 'Poppins';
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.308);
+    margin-top: 20px;
+    transition: 0.15s all ease-in;
+}
+.content--wrapper button:hover {
+    background-color: var(--soft-magenta);
+    transition: 0.15s all ease-in;
+}
+footer {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-top: 10vh;
+}
+footer .icon {
+    color: white;
+    width: 42px;
+    height: 42px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all ease-in 0.2s;
+}
+footer .icon:hover {
+    border-color: var(--soft-magenta);
+    color: var(--soft-magenta);
+    transition: all ease-in 0.2s;
+}
+@media screen and (max-width: 375px) {
+ body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+ }
+ main {
+    width: 300px;
+    margin-top: 0;
+ }
+ header {
+    margin-bottom: 70px;
+    text-align: left;
+ }
+ header img {
+    width: 150px;
+ }
+ .container {
+    flex-direction: column;
+ }
+ .content--wrapper {
+    margin-left: 0;
+    margin-top: 40px;
+ }
+ .content--wrapper h1 {
+    font-size: 24px;
+ }
+ .content--wrapper p {
+    margin-top: 20px;
+    font-size: 14px;
+ }
+ footer {
+    margin-top: 70px;
+ }
+}
